@@ -4,12 +4,15 @@
   "description": "",
   "main": "identity-ingestor-patient-event.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon main.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "kafkajs": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
