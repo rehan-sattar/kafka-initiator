@@ -2,6 +2,7 @@ const Kafka = require('kafkajs').Kafka
 
 const streamName = 'stream_name'
 const brokers = ['localhost:9092']
+const sampleMesssage = {name: 'Rehan Sattar'}
 
 async function main() {
   try {
@@ -15,7 +16,7 @@ async function main() {
 
     const result = await producer.send({
       topic: 'topic_name',
-      messages: [{value: JSON.stringify()}],
+      messages: [{value: JSON.stringify(sampleMesssage)}],
     })
 
     console.log('✅ Message Send!', JSON.stringify(result))
